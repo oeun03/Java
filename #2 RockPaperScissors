@@ -24,7 +24,7 @@ public class RockPaperScissors {
 				if(str[n].equals("가위"))
 					System.out.println(", 비겼습니다.");
 				if(str[n].equals("바위"))
-					System.out.println(", 졌습니다.");
+					System.out.println(", 사용자가 졌습니다.");
 				if(str[n].equals("보"))
 					System.out.println(", 사용자가 이겼습니다.");
 			}
@@ -35,12 +35,12 @@ public class RockPaperScissors {
 				if(str[n].equals("바위"))
 					System.out.println(", 비겼습니다.");
 				if(str[n].equals("보"))
-					System.out.println(", 졌습니다.");
+					System.out.println(", 사용자가 졌습니다.");
 			}
 			
 			if(player.equals("보")) {
 				if(str[n].equals("가위"))
-					System.out.println(", 졌습니다.");
+					System.out.println(", 사용자가 졌습니다.");
 				if(str[n].equals("바위"))
 					System.out.println(", 사용자가 이겼습니다.");
 				if(str[n].equals("보"))
