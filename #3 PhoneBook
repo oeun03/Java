@@ -20,7 +20,7 @@ public class PhoneBook {
         Scanner sc = new Scanner(System.in);
         Phone phone[];
         int i;
-        System.out.print("인원수 >> ");
+        System.out.print("인원수>>");
         int num = sc.nextInt();
         phone = new Phone[num];
         for(i=0; i<phone.length; i++) {
@@ -32,7 +32,7 @@ public class PhoneBook {
         
         System.out.println("저장되었습니다...");
         while(true) {
-        	System.out.print("검색할 이름 >>");
+        	System.out.print("검색할 이름>>");
         	String name = sc.next();
         	for(i=0; i<num; i++) {
         		if(name.equals(phone[i].getName())) {
@@ -43,7 +43,7 @@ public class PhoneBook {
         	if(name.equals("그만"))
         		break;
         	if(i==num)
-        		System.out.println(name+"이 없습니다.");
+        		System.out.println(name+" 이 없습니다.");
         }
         sc.close();
     }
