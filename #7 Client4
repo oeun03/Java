@@ -11,19 +11,19 @@ import java.io.OutputStreamWriter;
 
 import javax.swing.*;
 
-public class Test4Client extends JFrame{
+public class Client4 extends JFrame{
 	
 	JTextField tf = new JTextField(10);
-	JLabel lb = new JLabel();
+	JLabel label = new JLabel();
 	Socket socket;
 	
-	public Test4Client() {
+	public Client4() {
 		
 		Container c = getContentPane();
 		c.setLayout(new FlowLayout());
 		c.add(new JLabel("단어 입력 >>"));
 		c.add(tf);
-		c.add(lb);
+		c.add(label);
 		
 		try {
 		socket = new Socket("localhost",9999);
@@ -40,7 +40,7 @@ public class Test4Client extends JFrame{
 					bw.write(tf.getText()+"\n");
 					bw.flush();
 					String result = br.readLine();
-					lb.setText(result);
+					label.setText(result);
 					
 				} catch (Exception e1) {
 					System.out.println(e1.getMessage());
@@ -48,7 +48,7 @@ public class Test4Client extends JFrame{
 			}
 		});
 		
-		setTitle("클라이언트");
+		setTitle("스펠체크 클라이언트");
 		setVisible(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(350,100);
@@ -56,6 +56,6 @@ public class Test4Client extends JFrame{
 	
 	
 	public static void main(String [] args) {
-		new Test4Client();
+		new Client4();
 	}
 }
