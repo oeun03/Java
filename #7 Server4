@@ -6,12 +6,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
-public class Test4Server extends JFrame{
+public class Server4 extends JFrame{
 	
 	ArrayList<String> wordList = new ArrayList<String>();
 	JTextArea ta = new JTextArea();
 	
-	public Test4Server() {
+	public Server4() {
 		readWordList();
 		
 		Container c = getContentPane();
@@ -20,7 +20,7 @@ public class Test4Server extends JFrame{
 		ta.setEnabled(false);
 		ta.setDisabledTextColor(Color.black);
 		
-		setTitle("영어 단어 체크 서버");
+		setTitle("영어 스펠 체크 서버");
 		setVisible(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(300,300);
@@ -92,6 +92,6 @@ public class Test4Server extends JFrame{
 	}
 	
 	public static void main(String[] args) {
-		new Test4Server();
+		new Server4();
 	}
 }
