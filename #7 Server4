@@ -29,9 +29,9 @@ public class Server4 extends JFrame{
 			
 			while(true) {
 				Socket socket = ss.accept();
-				ta.append("클라이언트 연결됨!"+"\n");
-				Multiple multi = new Multiple(socket);
-				multi.start();
+				ta.append("클라이언트 연결됨"+"\n");
+				Multiple mt = new Multiple(socket);
+				mt.start();
 			}
 		}
 		catch(Exception e) {
